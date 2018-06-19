@@ -1,0 +1,169 @@
+body {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #eee;
+  font-family:sans-serif;
+}
+/* CSS GRID LAYOUT */
+.header { grid-area: header; }
+.sidebar { grid-area: menu; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+.login-grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+ul {list-style:none;}
+button:focus {
+    outline: 0;
+}
+header {
+  background-color: #222;
+  text-align: center;
+}
+header nav ul {
+  display: inline-flex;
+  padding: 10px;
+}
+header nav ul li {
+  margin-right: 25px;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+header nav ul li.login {
+  position:absolute;
+  right: 0;
+}
+main {
+}
+footer {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+footer nav ul{
+  display: inline-flex;
+}
+footer nav ul li {
+  margin-right: 25px;
+  font-family: sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+}
+#SideBar {
+  width: 200px;
+}
+#SideBar h3{
+   color:#fff;
+   text-align: center;
+}
+button#sidebarCollapse {
+  margin-left: 0;
+  width: 200px;
+  background-color:#111;
+  border: none;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+}
+.sidenav {
+  width: 200px;
+  margin-left:-200px;
+  background-color: transparent;
+}
+.sidenav.active {
+    margin-left: 0;
+    background-color: #111;
+}
+.sidenav ul {
+  margin: 0;
+  padding: 0;
+}
+.sidenav li {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  outline: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.sidebar nav button.btn.btn-primary{
+  text-align: center;
+  border-radius: 0;
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Add an active class to the active dropdown button */
+.dropdown-btn.active {
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.dropdown-container.active {
+  display:block;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
